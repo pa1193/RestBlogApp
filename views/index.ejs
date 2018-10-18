@@ -1,0 +1,47 @@
+<%include partials/header%>
+<div class="ui main text container">
+	<div class="ui huge header">
+		RESTful Blog app
+	</div>
+	<div class="ui top attached segment">
+		<div class="ui divided items">
+			<%blogs.forEach(function(blogs) {%>
+					<div class="item">
+						
+					
+					
+
+					<div class="image">
+						<img src="<%=blogs.image%>"><br/>
+					</div>
+					<div class="content">
+						<a href="/blogs/<%=blogs._id%>" class="header"><%=blogs.title%></a>
+						<div class="meta">
+							<span><%=blogs.created.toDateString()%></span><br/>
+						</div>
+						<div class="discription">
+							<p><%-blogs.body.substring(0,100)%>...</p><br/>
+						</div>
+					<div class="extra">
+						<a href="/blogs/<%=blogs._id%>" >
+						<div class="ui animated fade button small" tabindex="0">
+				 		 	<div class="visible content"><i class="info icon"></i></div>
+				  			<div class="hidden content">Read More</div>
+				  		</div>
+					</a>
+					</div>
+					</div>
+					
+					</div>
+					
+				
+					
+			<%});%>
+		</div>
+	</div>
+</div>
+
+
+
+
+<%include partials/footer%>

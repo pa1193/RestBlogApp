@@ -1,0 +1,14 @@
+{
+  "name": "restblogapp",
+  "version": "1.0.0",
+  "description": "blog app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "paul",
+  "license": "ISC",
+  "dependencies": {
+    "npm": "^6.4.1"
+  }
+}

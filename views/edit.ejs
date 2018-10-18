@@ -1,0 +1,45 @@
+<%include partials/header%>
+<div class="ui main text container segment">
+	<div class="ui huge header">Edit Page</div>
+
+<form class="ui form" method="post" action="/blogs/<%=blog._id%>?_method=PUT">
+	<div class="field">
+		<label>Title</label>
+		<input type="text" name="blog[title]" value="<%=blog.title%>">
+	</div>
+	<div class="field">
+		<label>Image</label>
+	<input type="text" name="blog[image]" value="<%=blog.image%>">
+	</div>
+	<div class="field">
+		<label>Blog content</label>
+		<textarea  name="blog[body]">
+			<%=blog.body%>
+		</textarea>
+<span style="display: inline;">
+	
+
+	<button type="submit" class="ui animated blue big button" tabindex="0">
+  		<div class="visible content">Submit</div>
+ 		 <div class="hidden content">
+    		<i class="right  arrow icon"></i>
+  		</div>
+	</button>
+	</form>
+	
+	<form method="post" id="delete" action="/blogs/<%=blog._id%>?_method=DELETE">
+			<button class="ui animated red big button" tabindex="0">
+				<div class="visible content">Delete</div>	
+				<div class="hidden content">
+					<i class="trash alternate icon"></i>
+				</div>
+			</button>
+	</form>
+	</span>
+	</div>
+	
+	
+	
+
+</div>
+<%include partials/footer%>
